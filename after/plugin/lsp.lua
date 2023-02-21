@@ -6,12 +6,11 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local mlspc = require('mason-lspconfig')
 
 
-lsp.preset({ name = 'recommended', manage_nvim_cmp = false })
-
--- local lsp = require('lsp-zero').preset({
---     name = 'recommended',
---     manage_nvim_cmp = false,
--- })
+lsp.preset({
+    name = 'recommended',
+    manage_nvim_cmp = false,
+    configure_diagnostics = false
+})
 
 lsp.nvim_workspace()
 lsp.setup()
@@ -53,4 +52,19 @@ mlspc.setup_handlers({
 
 mlspc.setup()
 mason.setup()
+
+
+local sign = function(opts)
+    vim.fn.sign_define(opts.name, {
+        texthl = opts.name,
+        text = opts.text,
+        numhl = ''
+    })
+end
+
+sign({ name = 'DiagnosticSignError', text = '✘' })
+sign({ name = 'DiagnosticSignWarn',  text = '▲' })
+sign({ name = 'DiagnosticSignHint',  text = '⚑' })
+sign({ name = 'DiagnosticSignInfo',  text = '' })
+
 
