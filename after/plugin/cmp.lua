@@ -12,7 +12,8 @@ require('luasnip.loaders.from_vscode').lazy_load()
 
 
 local has_words_before = function()
-    local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
+    unpack = unpack or table.unpack
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
 end
 
@@ -33,7 +34,8 @@ cmp.setup({
     mapping = {
         ['<Up>'] = cmp.mapping.select_prev_item(),
         ['<Down>'] = cmp.mapping.select_next_item(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        -- ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-e>'] = cmp.mapping.abort(),
         ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i' }),
         ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
