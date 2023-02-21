@@ -67,6 +67,8 @@ return require('packer').startup(function(use)
 
     -- .http files
     use 'rest-nvim/rest.nvim'
-    
+
+    -- comments
+    use 'numToStr/Comment.nvim'
 
 end)
