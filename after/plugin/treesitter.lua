@@ -13,7 +13,8 @@ require('nvim-treesitter.configs').setup({
     }
 })
 
-vim.opt.indentexpr = 'nvim_treesitter#indent()'
+vim.opt.indentexpr = 'syntax'
+-- vim.opt.indentexpr = 'nvim_treesitter#indent()'
 
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
