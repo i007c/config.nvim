@@ -16,10 +16,10 @@ require("nvim-tree").setup({
             'node_modules',
             '__pycache__',
             '.pytest_cache',
-            '.env',
+            '^\\.env$',
             '^\\.git$',
             'package-lock.json',
-            '.ccls-cache'
+            '^\\.ccls-cache$'
         }
     },
     renderer = {
