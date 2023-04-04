@@ -1,5 +1,9 @@
 
 local telescope = require('telescope')
+local nvim_tree = require('nvim-tree')
+local project_actions = require("telescope._extensions.project.actions")
+local project_utils = require("telescope._extensions.project.utils")
+local telescope_actions = require("telescope.actions")
 
 require('telescope').setup({
     extensions = {
@@ -11,7 +15,14 @@ require('telescope').setup({
             theme = 'dropdown',
             order_by = 'asc',
             search_by = 'title',
-            sync_with_nvim_tree = true, -- default false
+            sync_with_nvim_tree = false, -- default false
+            on_project_selected = function(prompt_bufnr)
+                local path = project_actions.get_selected_path(prompt_bufnr)
+                telescope_actions.close(prompt_bufnr)
+                project_utils.change_project_dir(path)
+                nvim_tree.change_dir(path)
+                nvim_tree.focus()
+            end
         }
     }
 })
