@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/i007c/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["aerial.nvim"] = {
+    loaded = true,
+    path = "/home/i007c/.local/share/nvim/site/pack/packer/start/aerial.nvim",
+    url = "https://github.com/stevearc/aerial.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/i007c/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -253,11 +258,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/i007c/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
-  },
-  ["virtual-types.nvim"] = {
-    loaded = true,
-    path = "/home/i007c/.local/share/nvim/site/pack/packer/start/virtual-types.nvim",
-    url = "https://github.com/jubnzv/virtual-types.nvim"
   }
 }
 

@@ -77,4 +77,6 @@ return require('packer').startup(function(use)
     -- comments
     use 'numToStr/Comment.nvim'
 
+    use 'stevearc/aerial.nvim'
+
 end)

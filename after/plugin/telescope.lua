@@ -5,7 +5,7 @@ local project_actions = require("telescope._extensions.project.actions")
 local project_utils = require("telescope._extensions.project.utils")
 local telescope_actions = require("telescope.actions")
 
-require('telescope').setup({
+telescope.setup({
     extensions = {
         project = {
             base_dirs = {
@@ -29,6 +29,7 @@ require('telescope').setup({
 
 
 telescope.load_extension('project')
+telescope.load_extension('aerial')
 
 local builtin = require('telescope.builtin')
 
@@ -39,5 +40,5 @@ vim.keymap.set('n', '<leader>ps', function()
 end)
 
 vim.keymap.set('n', '<leader>pp', telescope.extensions.project.project)
-
+vim.keymap.set({'n', 'i'}, '<C-B>', telescope.extensions.aerial.aerial)
 
