@@ -31,8 +31,8 @@ local function lsp_keymaps(bufnr)
     map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
     map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
     map('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
-    map('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
-    map('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
+    map('n', '<F3>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+    map('x', '<F3>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
 
     -- Diagnostics
     map('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')

@@ -253,6 +253,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/i007c/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  ["virtual-types.nvim"] = {
+    loaded = true,
+    path = "/home/i007c/.local/share/nvim/site/pack/packer/start/virtual-types.nvim",
+    url = "https://github.com/jubnzv/virtual-types.nvim"
   }
 }
 

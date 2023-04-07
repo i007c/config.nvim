@@ -34,7 +34,6 @@ cmp.setup({
     mapping = {
         ['<Up>'] = cmp.mapping.select_prev_item(),
         ['<Down>'] = cmp.mapping.select_next_item(),
-        -- ['<CR>'] = cmp.mapping.confirm({ select = true }),
         ['<C-e>'] = cmp.mapping.abort(),
         ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i' }),
         ['<Tab>'] = cmp.mapping(function(fallback)
