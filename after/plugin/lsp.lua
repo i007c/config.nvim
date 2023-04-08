@@ -1,4 +1,3 @@
-
 local mason = require('mason')
 local lspconfig = require('lspconfig')
 local lsp = require('lsp-zero')
@@ -18,7 +17,7 @@ lsp.setup()
 
 local function lsp_keymaps(bufnr)
     local map = function(m, lhs, rhs)
-        local opts = {remap = false, silent = true, buffer = bufnr}
+        local opts = { remap = false, silent = true, buffer = bufnr }
         vim.keymap.set(m, lhs, rhs, opts)
     end
 
@@ -47,29 +46,39 @@ local function lsp_attach(client, bufnr)
 
     buf_command(bufnr, 'LspFormat', function()
         vim.lsp.buf.format()
-    end, {desc = 'Format buffer with language server'})
+    end, { desc = 'Format buffer with language server' })
 end
 
 lspconfig.ccls.setup({
     on_attach = lsp_attach,
     init_options = {
         cache = {
-            directory = '.ccls-cache';
+            directory = '.ccls-cache',
         }
     },
     capabilities = capabilities
 })
 
+lspconfig.jsonls.setup({
+    on_attach = lsp_attach,
+    settings = {
+        json = {
+            schemas = require('schemastore').json.schemas(),
+            validate = { enable = true },
+        },
+    },
+    capabilities = capabilities
+})
 
 
 mlspc.setup_handlers({
-    function (server_name)
+    function(server_name)
         lspconfig[server_name].setup({
             on_attach = lsp_attach,
             capabilities = capabilities
         })
     end,
-    lua_ls = function ()
+    lua_ls = function()
         lspconfig.lua_ls.setup({
             capabilities = capabilities,
             on_attach = lsp_attach,
@@ -100,8 +109,8 @@ local sign = function(opts)
 end
 
 sign({ name = 'DiagnosticSignError', text = '✘' })
-sign({ name = 'DiagnosticSignWarn',  text = '▲' })
-sign({ name = 'DiagnosticSignHint',  text = '⚑' })
-sign({ name = 'DiagnosticSignInfo',  text = '' })
+sign({ name = 'DiagnosticSignWarn', text = '▲' })
+sign({ name = 'DiagnosticSignHint', text = '⚑' })
+sign({ name = 'DiagnosticSignInfo', text = '' })
 
 

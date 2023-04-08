@@ -40,5 +40,5 @@ vim.keymap.set('n', '<leader>ps', function()
 end)
 
 vim.keymap.set('n', '<leader>pp', telescope.extensions.project.project)
-vim.keymap.set({'n', 'i'}, '<C-B>', telescope.extensions.aerial.aerial)
+vim.keymap.set({'n', 'i'}, '<C-G>', telescope.extensions.aerial.aerial)
 

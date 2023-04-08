@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/i007c/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["LspUI.nvim"] = {
+    loaded = true,
+    path = "/home/i007c/.local/share/nvim/site/pack/packer/start/LspUI.nvim",
+    url = "https://github.com/jinzhongjia/LspUI.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/i007c/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -128,6 +133,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/i007c/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["fidget.nvim"] = {
+    loaded = true,
+    path = "/home/i007c/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+    url = "https://github.com/j-hui/fidget.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -233,6 +243,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/i007c/.local/share/nvim/site/pack/packer/start/rest.nvim",
     url = "https://github.com/rest-nvim/rest.nvim"
+  },
+  ["schemastore.nvim"] = {
+    loaded = true,
+    path = "/home/i007c/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
+    url = "https://github.com/b0o/schemastore.nvim"
   },
   ["telescope-project.nvim"] = {
     loaded = true,

@@ -17,3 +17,4 @@ vim.keymap.set('n', 'm', '<C-W><C-W>')
 vim.keymap.set('n', '<C-9>', '<Plug>RestNvim')
 
 vim.keymap.set({'n', 'i'}, '<C-S>', vim.cmd.w)
+
