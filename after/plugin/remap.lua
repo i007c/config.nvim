@@ -18,3 +18,5 @@ vim.keymap.set('n', '<C-9>', '<Plug>RestNvim')
 
 vim.keymap.set({'n', 'i'}, '<C-S>', vim.cmd.w)
 
+vim.keymap.set('n', '<S-B>', '<CMD>LspUI diagnostic next<CR>')
+

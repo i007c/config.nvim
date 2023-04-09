@@ -81,8 +81,6 @@ return require('packer').startup(function(use)
 
     use 'b0o/schemastore.nvim'
 
-    use 'j-hui/fidget.nvim'
-
     use 'jinzhongjia/LspUI.nvim'
 
 end)
