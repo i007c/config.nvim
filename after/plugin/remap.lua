@@ -1,4 +1,3 @@
-
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
 vim.keymap.set('n', 'n', 'nzzzv')
@@ -16,7 +15,7 @@ vim.keymap.set('n', 'm', '<C-W><C-W>')
 
 vim.keymap.set('n', '<C-9>', '<Plug>RestNvim')
 
-vim.keymap.set({'n', 'i'}, '<C-S>', vim.cmd.w)
+vim.keymap.set({ 'n', 'i' }, '<C-S>', vim.cmd.w)
 
 vim.keymap.set('n', '<S-B>', '<CMD>LspUI diagnostic next<CR>')
 
@@ -38,5 +37,4 @@ vim.keymap.set('n', '<leader>pl', '<CMD>Octo pr list<CR>')
 vim.keymap.set('n', '<leader>pc', '<CMD>Octo pr create<CR>')
 
 
-vim.keymap.set({'n', 'i'}, '<C-n>', '<CMD>Telescope neoclip<CR>')
-
+vim.keymap.set({ 'n', 'i' }, '<C-n>', '<CMD>Telescope neoclip<CR>')
