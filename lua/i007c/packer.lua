@@ -14,9 +14,11 @@ return require('packer').startup(function(use)
 
     -- moving between files
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.1',
     }
     use 'nvim-telescope/telescope-project.nvim'
+    use 'AckslD/nvim-neoclip.lua'
 
     use 'nvim-tree/nvim-tree.lua'
     use 'ThePrimeagen/harpoon'
@@ -24,6 +26,7 @@ return require('packer').startup(function(use)
     -- git
     use 'tpope/vim-fugitive'
     use 'lewis6991/gitsigns.nvim'
+    use 'pwntester/octo.nvim'
 
     -- syntax stuff
     use 'nvim-treesitter/nvim-treesitter'

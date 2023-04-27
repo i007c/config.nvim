@@ -3,12 +3,18 @@ local cmp = require('cmp')
 local lspkind = require('lspkind')
 local luasnip = require('luasnip')
 
-luasnip.config.set_config({
-    region_check_events = 'InsertEnter',
-    delete_check_events = 'InsertLeave'
-})
+-- luasnip.config.set_config({
+--     region_check_events = 'InsertEnter',
+--     delete_check_events = 'InsertLeave'
+-- })
 
-require('luasnip.loaders.from_vscode').lazy_load()
+-- require('luasnip.loaders.from_vscode').load({
+--     paths = '~/.config/Code/User/snippets'
+-- })
+--
+-- require('luasnip.loaders.from_lua').load({
+--     paths = '../../lua/i007c/snippets/'
+-- })
 
 
 local has_words_before = function()
@@ -21,8 +27,8 @@ local feedkey = function(key, mode)
     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 
-
 local buffer = { name = 'buffer', keyword_length = 4, max_item_count = 10 }
+
 
 cmp.setup({
     snippet = {
@@ -32,8 +38,9 @@ cmp.setup({
         end,
     },
     mapping = {
-        ['<Up>'] = cmp.mapping.select_prev_item(),
-        ['<Down>'] = cmp.mapping.select_next_item(),
+        ['<C-p>'] = cmp.mapping.select_prev_item({behavior = cmp.SelectBehavior.Select}),
+        ['<C-n>'] = cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Select}),
+        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
         ['<C-e>'] = cmp.mapping.abort(),
         ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i' }),
         ['<Tab>'] = cmp.mapping(function(fallback)
@@ -59,6 +66,7 @@ cmp.setup({
         ghost_text = true
     },
     sources = {
+        -- { name = 'luasnip' },
         { name = 'nvim_lsp' },
         { name = 'vsnip' },
         buffer

@@ -4,6 +4,9 @@ local nvim_tree = require('nvim-tree')
 local project_actions = require("telescope._extensions.project.actions")
 local project_utils = require("telescope._extensions.project.utils")
 local telescope_actions = require("telescope.actions")
+local neoclip = require('neoclip')
+
+neoclip.setup()
 
 telescope.setup({
     extensions = {
@@ -30,6 +33,7 @@ telescope.setup({
 
 telescope.load_extension('project')
 telescope.load_extension('aerial')
+telescope.load_extension('neoclip')
 
 local builtin = require('telescope.builtin')
 
