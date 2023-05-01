@@ -86,4 +86,6 @@ return require('packer').startup(function(use)
 
     use 'jinzhongjia/LspUI.nvim'
 
+    use 'wakatime/vim-wakatime'
+
 end)
