@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
     -- syntax stuff
     use 'nvim-treesitter/nvim-treesitter'
     use 'nvim-treesitter/playground'
+    use 'windwp/nvim-ts-autotag'
 
     -- Autocompletion
     use 'hrsh7th/nvim-cmp'
