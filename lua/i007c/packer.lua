@@ -11,7 +11,6 @@ return require('packer').startup(function(use)
     -- Color Theme
     use 'EdenEast/nightfox.nvim'
 
-
     -- moving between files
     use {
         'nvim-telescope/telescope.nvim',
@@ -22,6 +21,7 @@ return require('packer').startup(function(use)
 
     use 'nvim-tree/nvim-tree.lua'
     use 'ThePrimeagen/harpoon'
+
 
     -- git
     use 'tpope/vim-fugitive'
@@ -74,9 +74,6 @@ return require('packer').startup(function(use)
 
     -- view hex files
     use 'RaafatTurki/hex.nvim'
-
-    -- .http files
-    use 'rest-nvim/rest.nvim'
 
     -- comments
     use 'numToStr/Comment.nvim'
