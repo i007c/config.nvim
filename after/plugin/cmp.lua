@@ -63,7 +63,7 @@ cmp.setup({
         end, { 'i', 's' }),
     },
     experimental = {
-        ghost_text = true
+        -- ghost_text = true
     },
     sources = {
         -- { name = 'luasnip' },
