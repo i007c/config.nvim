@@ -3,7 +3,7 @@ BufNr = nil
 
 vim.api.nvim_create_user_command('RunTyche', (function ()
 
---[[     if BufNr ~= nil then
+    if BufNr ~= nil then
         vim.api.nvim_buf_delete(
             BufNr, { force = true, unload = true }
         )
@@ -12,7 +12,7 @@ vim.api.nvim_create_user_command('RunTyche', (function ()
             event = 'BufWritePost',
             group = 'Tyche'
         })
-    end ]]
+    end
 
     vim.cmd('vnew')
     vim.cmd('wincmd L')
