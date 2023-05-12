@@ -22,7 +22,7 @@ vim.api.nvim_create_user_command('RunTyche', (function ()
     vim.cmd('set buftype=nofile')
     vim.cmd('set nonumber')
     vim.cmd('set norelativenumber')
-    vim.cmd('set filetype=bash')
+    vim.cmd('set filetype=lua')
 
     BufNr = vim.api.nvim_win_get_buf(0)
 
@@ -32,7 +32,7 @@ vim.api.nvim_create_user_command('RunTyche', (function ()
         group = vim.api.nvim_create_augroup('Tyche', { clear = true }),
         pattern = {'tyche/*.c', 'tyche/*.py'},
         callback = function()
-            vim.api.nvim_buf_set_lines(BufNr, 0, -1, false, {'running ...'})
+            vim.api.nvim_buf_set_lines(BufNr, 0, -1, false, {'output:', ''})
 
             vim.fn.jobstart({'./tyche/build.sh'}, {
                 stdout_buffered = true,
