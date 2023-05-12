@@ -19,6 +19,8 @@ require('nightfox').setup({
             ['@parameter'] = { fg = '#ff7b56' },
             Exception = { fg = '#ff2457' },
             ['@exception'] = { fg = '#ff2457' },
+            ['@include'] = { fg = '#ff2457' },
+            ['@define'] = { fg = '#ff2457' },
             ['@keyword.return'] = { fg = '#ff2457' },
             ['@function.builtin'] = { fg = '#76fec5' },
             ['@type.builtin'] = { fg = '#ffcb7f' },
