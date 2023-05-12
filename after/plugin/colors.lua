@@ -58,10 +58,7 @@ require('nightfox').setup({
                 type = '#ffcb7f',
                 builtin1 = '#e346e3',
                 func = '#699fff',
-                -- preproc = '#f2f4f8',
-                -- preproc = '#FFAD32',
-                -- preproc = '#c78feb',
-                preproc = '#8d9aa6',
+                preproc = '#ff2457',
                 conditional = '#ff2457',
                 statement = '#ff2457',
             }
