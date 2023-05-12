@@ -30,7 +30,7 @@ vim.api.nvim_create_user_command('RunTyche', (function ()
 
     vim.api.nvim_create_autocmd('BufWritePost', {
         group = vim.api.nvim_create_augroup('Tyche', { clear = true }),
-        pattern = {'tyche/*.c', 'tyche/*.py'},
+        pattern = '*/plutus/tyche/*.{c,py,h}',
         callback = function()
             vim.api.nvim_buf_set_lines(BufNr, 0, -1, false, {'output:', ''})
 
