@@ -12,8 +12,7 @@ vim.keymap.set('n', '<leader>gl', '<CMD>Git pull<CR>')
 vim.keymap.set('n', '<leader>gp', '<CMD>Git push<CR>')
 
 vim.keymap.set('n', 'm', '<C-W><C-W>')
-
-vim.keymap.set('n', '<C-9>', '<Plug>RestNvim')
+vim.keymap.set('n', 'M', '<CMD>NvimTreeFocus<CR>')
 
 vim.keymap.set({ 'n', 'i' }, '<C-S>', vim.cmd.w)
 
