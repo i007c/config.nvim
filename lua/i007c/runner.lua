@@ -38,6 +38,11 @@ vim.api.nvim_create_user_command('RunTyche', (function ()
         vim.api.nvim_buf_set_lines(BufNr, -1, -1, false, data)
     end
 
+    local write_error = function(_, data)
+        if #data < 2 then return end
+        vim.api.nvim_buf_set_lines(BufNr, 0, -1, false, data)
+    end
+
     vim.api.nvim_create_autocmd('BufWritePost', {
         group = vim.api.nvim_create_augroup('TycheC', { clear = true }),
         pattern = '*/plutus/tyche/*.{c,h}',
@@ -48,7 +53,7 @@ vim.api.nvim_create_user_command('RunTyche', (function ()
                 stdout_buffered = true,
                 stderr_buffered = true,
                 on_stdout = write_lines,
-                on_stderr = write_lines,
+                on_stderr = write_error,
             })
         end,
     })
@@ -63,7 +68,7 @@ vim.api.nvim_create_user_command('RunTyche', (function ()
                 stdout_buffered = true,
                 stderr_buffered = true,
                 on_stdout = write_lines,
-                on_stderr = write_lines,
+                on_stderr = write_error,
             })
         end,
     })
