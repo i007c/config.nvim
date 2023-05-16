@@ -84,4 +84,6 @@ return require('packer').startup(function(use)
 
     use 'jinzhongjia/LspUI.nvim'
 
+    use 'IndianBoy42/tree-sitter-just'
+
 end)

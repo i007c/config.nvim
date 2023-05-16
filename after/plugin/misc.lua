@@ -11,3 +11,5 @@ require('hex').setup()
 
 require('LspUI').setup()
 
+require('tree-sitter-just').setup({})
+
