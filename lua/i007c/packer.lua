@@ -86,4 +86,9 @@ return require('packer').startup(function(use)
 
     use 'IndianBoy42/tree-sitter-just'
 
+
+    use 'nvim-lualine/lualine.nvim'
+    -- use 'linrongbin16/lsp-progress.nvim'
+    use 'j-hui/fidget.nvim'
+
 end)
