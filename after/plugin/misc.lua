@@ -21,3 +21,7 @@ require('tree-sitter-just').setup({})
         blend = 0,
     }
 }) ]]
+
+
+require('leap').add_default_mappings(true)
+-- require('leap').init_highlight(true)
