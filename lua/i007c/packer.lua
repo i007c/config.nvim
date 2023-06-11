@@ -91,4 +91,6 @@ return require('packer').startup(function(use)
     -- use 'linrongbin16/lsp-progress.nvim'
     use 'j-hui/fidget.nvim'
 
+    use 'ggandor/leap.nvim'
+
 end)
