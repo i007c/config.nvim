@@ -19,7 +19,7 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.termbidi = true
 
--- vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = '80'
 
 vim.g.mapleader = ' '
 
