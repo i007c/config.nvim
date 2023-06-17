@@ -28,7 +28,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
-
 -- github
 vim.keymap.set('n', '<leader>il', '<CMD>Octo issue list<CR>')
 vim.keymap.set('n', '<leader>ic', '<CMD>Octo issue create<CR>')

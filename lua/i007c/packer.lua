@@ -89,7 +89,10 @@ return require('packer').startup(function(use)
 
     use 'nvim-lualine/lualine.nvim'
     -- use 'linrongbin16/lsp-progress.nvim'
-    use 'j-hui/fidget.nvim'
+    use {
+        'j-hui/fidget.nvim',
+        tag = 'legacy'
+    }
 
     use 'ggandor/leap.nvim'
 
