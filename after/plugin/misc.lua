@@ -23,5 +23,5 @@ require('fidget').setup({
 })
 
 
-require('leap').add_default_mappings(true)
+-- require('leap').add_default_mappings(true)
 -- require('leap').init_highlight(true)

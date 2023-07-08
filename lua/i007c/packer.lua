@@ -94,6 +94,7 @@ return require('packer').startup(function(use)
         tag = 'legacy'
     }
 
-    use 'ggandor/leap.nvim'
+    -- search
+    -- use 'ggandor/leap.nvim'
 
 end)
