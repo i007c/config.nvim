@@ -37,5 +37,4 @@ vim.keymap.set('n', '<leader>pc', '<CMD>Octo pr create<CR>')
 
 vim.keymap.set({ 'n', 'i' }, '<C-n>', '<CMD>Telescope neoclip<CR>')
 
-vim.keymap.set({ 'n', 'i' }, '<S-u>', '<CMD>UndotreeToggle<CR>')
-
+vim.keymap.set({ 'n', 'i' }, '<C-m>', '<CMD>UndotreeToggle<CR>')
