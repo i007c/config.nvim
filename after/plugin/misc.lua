@@ -22,6 +22,11 @@ require('fidget').setup({
     }
 })
 
+vim.cmd([[
+    let g:undotree_SplitWidth=27
+    let g:undotree_WindowLayout=3
+    let g:undotree_DiffAutoOpen=0
+]])
 
 -- require('leap').add_default_mappings(true)
 -- require('leap').init_highlight(true)

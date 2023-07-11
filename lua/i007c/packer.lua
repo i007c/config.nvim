@@ -97,4 +97,6 @@ return require('packer').startup(function(use)
     -- search
     -- use 'ggandor/leap.nvim'
 
+    use 'mbbill/undotree'
+
 end)
