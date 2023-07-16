@@ -88,8 +88,12 @@ mlspc.setup_handlers({
                         globals = { 'vim' }
                     },
                     workspace = {
-                        library = vim.api.nvim_get_runtime_file('', true)
-                    }
+                        library = vim.api.nvim_get_runtime_file('', true),
+                        checkThirdParty = false
+                    },
+                    telemetry = {
+                        enable = false,
+                    },
                 }
             }
         })
@@ -97,7 +101,9 @@ mlspc.setup_handlers({
 })
 
 mlspc.setup()
-mason.setup()
+mason.setup({
+    PATH = 'prepend'
+})
 
 
 local sign = function(opts)
