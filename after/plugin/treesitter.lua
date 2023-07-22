@@ -20,6 +20,7 @@ require('nvim-treesitter.configs').setup({
 vim.opt.indentexpr = 'syntax'
 -- vim.opt.indentexpr = 'nvim_treesitter#indent()'
 
+-- its lags on large files for some reason
 -- vim.opt.foldmethod = 'expr'
 -- vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldenable = false
