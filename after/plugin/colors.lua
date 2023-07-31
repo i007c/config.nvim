@@ -27,6 +27,7 @@ require('nightfox').setup({
             ['@constant.builtin'] = { fg = '#00dc7d' },
             ['@constant'] = { fg = '#f2f4f8' },
             ['@property'] = { fg = '#f2f4f8' },
+            ['@variable.builtin'] = { fg = '#f2f4f8' },
             ['@field'] = { fg = '#f2f4f8' },
             ['@string.escape'] = { fg = '#00dc7d' },
             ['@constructor'] = { fg = '#ffcb7f' },
