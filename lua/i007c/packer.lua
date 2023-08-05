@@ -104,5 +104,9 @@ return require('packer').startup(function(use)
     -- use 'ggandor/leap.nvim'
 
     use 'mbbill/undotree'
+    use {
+        'kylechui/nvim-surround',
+        tag = '*'
+    }
 
 end)
