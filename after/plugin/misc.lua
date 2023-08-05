@@ -22,6 +22,8 @@ require('fidget').setup({
     }
 })
 
+require('nvim-surround').setup()
+
 vim.cmd([[
     let g:undotree_SplitWidth=27
     let g:undotree_WindowLayout=3
