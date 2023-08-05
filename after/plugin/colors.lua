@@ -55,7 +55,7 @@ require('nightfox').setup({
                 number = '#00dc7d',
                 keyword = '#ff2457',
                 type = '#ffcb7f',
-                builtin1 = '#e346e3',
+                builtin1 = '#e346e3', -- builtin type
                 func = '#699fff',
                 preproc = '#ff2457',
                 conditional = '#ff2457',
@@ -67,4 +67,3 @@ require('nightfox').setup({
 
 
 vim.cmd('colorscheme carbonfox')
-
