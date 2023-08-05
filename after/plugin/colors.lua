@@ -1,4 +1,3 @@
-
 -- local palette = require('nightfox.palette').load('carbonfox')
 -- local spec = require('nightfox.spec').load('carbonfox')
 
@@ -45,7 +44,6 @@ require('nightfox').setup({
             fugitiveHeading = { fg = '#ff2457' },
 
             diffSubname = { fg = '#f2f4f8' },
-
         }
     },
 
