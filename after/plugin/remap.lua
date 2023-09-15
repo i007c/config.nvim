@@ -19,6 +19,12 @@ vim.keymap.set({ 'n', 'i' }, '<C-S>', vim.cmd.w)
 vim.keymap.set('n', '<S-B>', '<CMD>LspUI diagnostic next<CR>')
 
 
+vim.keymap.set({ 'n', 'i' }, '<up>', '<nop>')
+vim.keymap.set({ 'n', 'i' }, '<down>', '<nop>')
+vim.keymap.set({ 'n', 'i' }, '<left>', '<nop>')
+vim.keymap.set({ 'n', 'i' }, '<right>', '<nop>')
+
+
 -- now this is epic - ThePrimeagen
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

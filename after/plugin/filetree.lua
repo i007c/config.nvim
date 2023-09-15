@@ -69,6 +69,9 @@ require("nvim-tree").setup({
     view = {
         width = 25,
     },
+    update_focused_file = {
+        enable = true,
+    },
     filters = {
         custom = {
             'node_modules',
