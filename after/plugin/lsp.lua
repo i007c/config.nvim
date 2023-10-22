@@ -11,7 +11,7 @@ lsp.preset({
     set_lsp_keymaps = true,
 })
 
-lsp.nvim_workspace()
+-- lsp.nvim_workspace()
 lsp.setup()
 
 

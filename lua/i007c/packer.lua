@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
     -- moving between files
     use {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.1',
+        tag = '0.1.4',
     }
     use 'nvim-telescope/telescope-project.nvim'
     use 'AckslD/nvim-neoclip.lua'
@@ -84,15 +84,18 @@ return require('packer').startup(function(use)
     -- comments
     use 'numToStr/Comment.nvim'
 
+    -- Ctrl-G
     use 'stevearc/aerial.nvim'
 
+    -- json schemas
     use 'b0o/schemastore.nvim'
 
-    use 'jinzhongjia/LspUI.nvim'
+    use {
+        'jinzhongjia/LspUI.nvim',
+        branch = 'legacy',
+    }
 
-    use 'IndianBoy42/tree-sitter-just'
-
-
+    -- status line
     use 'nvim-lualine/lualine.nvim'
     -- use 'linrongbin16/lsp-progress.nvim'
     use {
@@ -107,6 +110,12 @@ return require('packer').startup(function(use)
     use {
         'kylechui/nvim-surround',
         tag = '*'
+    }
+
+
+    use {
+        'iamcco/markdown-preview.nvim',
+        run = function() vim.fn["mkdp#util#install"]() end
     }
 
 end)
