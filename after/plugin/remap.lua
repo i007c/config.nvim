@@ -49,5 +49,8 @@ vim.keymap.set('n', '<leader>gf', vim.lsp.buf.format)
 
 vim.keymap.set('n', '<leader>r', function()
     vim.cmd('silent !python ' .. vim.fn.expand('%'))
+    if vim.v.shell_error ~= 0 then
+        vim.cmd.echo('"ERROR"')
+    end
 end)
 
