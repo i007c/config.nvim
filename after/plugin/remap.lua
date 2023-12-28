@@ -45,4 +45,4 @@ vim.keymap.set({ 'n', 'i' }, '<C-n>', '<CMD>Telescope neoclip<CR>')
 
 vim.keymap.set({ 'n', 'i' }, '<C-l>', '<CMD>UndotreeToggle<CR>')
 
-vim.keymap.set({ 'n', 'i' }, '<C-S-F>', vim.lsp.buf.format)
+vim.keymap.set('n', '<leader>gf', vim.lsp.buf.format)

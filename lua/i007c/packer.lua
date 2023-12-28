@@ -69,7 +69,7 @@ return require('packer').startup(function(use)
 
     -- formatters ??
     use 'lukas-reineke/lsp-format.nvim'
-    use 'jose-elias-alvarez/null-ls.nvim'
+    use 'nvimtools/none-ls.nvim'
 
     -- icons
     use 'nvim-tree/nvim-web-devicons'
@@ -100,7 +100,7 @@ return require('packer').startup(function(use)
     -- use 'linrongbin16/lsp-progress.nvim'
     use {
         'j-hui/fidget.nvim',
-        tag = 'legacy'
+        tag = 'v1.1.0'
     }
 
     -- search

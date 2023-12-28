@@ -1,4 +1,3 @@
-
 require('trouble').setup()
 
 require('colorizer').setup({ '*' }, {
@@ -14,11 +13,15 @@ require('LspUI').setup({
 })
 
 require('fidget').setup({
-    timer = {
-        fidget_decay = 100
+    progress = {
+        display = {
+            done_ttl = 1
+        }
     },
-    window = {
-        blend = 0,
+    notification = {
+        window = {
+            winblend = 0,
+        }
     }
 })
 
