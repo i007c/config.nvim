@@ -1,4 +1,3 @@
-
 local telescope = require('telescope')
 local nvim_tree = require('nvim-tree')
 local project_actions = require("telescope._extensions.project.actions")
@@ -40,9 +39,15 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<leader>ps', function()
-	builtin.grep_string({ search = vim.fn.input('Grep > ') });
+    builtin.grep_string({ search = vim.fn.input('Grep > ') })
+end)
+
+vim.keymap.set('n', '<leader>pr', function()
+    builtin.grep_string({
+        search = vim.fn.input('Grep Regex > '),
+        use_regex = true
+    })
 end)
 
 vim.keymap.set('n', '<leader>pp', telescope.extensions.project.project)
-vim.keymap.set({'n', 'i'}, '<C-G>', telescope.extensions.aerial.aerial)
-
+vim.keymap.set({ 'n', 'i' }, '<C-G>', telescope.extensions.aerial.aerial)

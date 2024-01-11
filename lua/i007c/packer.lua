@@ -65,7 +65,8 @@ return require('packer').startup(function(use)
     use 'norcalli/nvim-colorizer.lua'
 
     -- discord presence
-    use 'andweeb/presence.nvim'
+    -- use 'andweeb/presence.nvim'
+    use 'IogaMaster/neocord'
 
     -- formatters ??
     use 'lukas-reineke/lsp-format.nvim'
