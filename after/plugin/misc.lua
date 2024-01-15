@@ -1,4 +1,9 @@
-require('trouble').setup()
+require('trouble').setup({
+    action_keys = {
+        toggle_mode = 't'
+    },
+    auto_close = false,
+})
 
 require('colorizer').setup({ '*' }, {
     -- mode = 'foreground',

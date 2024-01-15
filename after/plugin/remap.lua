@@ -16,7 +16,11 @@ vim.keymap.set('n', 'M', '<CMD>NvimTreeFocus<CR>')
 
 vim.keymap.set({ 'n', 'i' }, '<C-S>', vim.cmd.w)
 
-vim.keymap.set('n', '<S-B>', '<CMD>LspUI diagnostic next<CR>')
+local trouble = require("trouble")
+vim.keymap.set('n', '<S-B>', (function()
+    trouble.open()
+    trouble.next({ skip_groups = true, jump = true });
+end))
 
 
 vim.keymap.set({ 'n', 'i' }, '<up>', '<nop>')
@@ -53,4 +57,3 @@ vim.keymap.set('n', '<leader>r', function()
         vim.cmd.echo('"ERROR"')
     end
 end)
-
