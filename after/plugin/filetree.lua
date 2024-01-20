@@ -85,8 +85,7 @@ require("nvim-tree").setup({
     },
     renderer = {
         icons = {
-            -- git_placement = 'signcolumn',
-            git_placement = 'before',
+            git_placement = 'signcolumn',
             glyphs = {
                 git = {
                     unstaged = '',
