@@ -30,7 +30,6 @@ return require('packer').startup(function(use)
 
     -- syntax stuff
     use 'nvim-treesitter/nvim-treesitter'
-    use 'nvim-treesitter/playground'
     use {
         'nvim-treesitter/nvim-treesitter-textobjects',
         after = 'nvim-treesitter',
@@ -117,5 +116,8 @@ return require('packer').startup(function(use)
         'iamcco/markdown-preview.nvim',
         run = function() vim.fn["mkdp#util#install"]() end
     }
+
+    -- games
+    use 'ThePrimeagen/vim-be-good'
 
 end)

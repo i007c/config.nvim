@@ -38,6 +38,10 @@ require('nightfox').setup({
             NvimTreeFolderName = { fg = '#f2f4f8' },
             NvimTreeOpenedFolderName = { fg = '#f2f4f8' },
             NvimTreeFolderIcon = { fg = '#ff2970' },
+            NvimTreeClosedFolderIcon = { fg = '#ff2970' },
+            NvimTreeOpenedFolderIcon = { fg = '#ff2970' },
+            NvimTreeGitDirtyIcon = { fg = '#ffcb7f' },
+            NvimTreeGitDeletedIcon = { fg = '#ff2457' },
 
             fugitiveUnstagedHeading = { fg = '#f9ca24' },
             fugitiveStagedHeading = { fg = '#00dc7d' },
