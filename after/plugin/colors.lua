@@ -16,6 +16,7 @@ require('nightfox').setup({
         carbonfox = {
             Statement = { fg = '#fff000' },
             ['@parameter'] = { fg = '#ff7b56' },
+            ['@variable.parameter'] = { fg = '#ff7b56' },
             Exception = { fg = '#ff2457' },
             ['@exception'] = { fg = '#ff2457' },
             ['@include'] = { fg = '#ff2457' },
