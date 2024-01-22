@@ -80,7 +80,8 @@ require("nvim-tree").setup({
             '^\\.env$',
             '^\\.git$',
             'package-lock.json',
-            '^\\.ccls-cache$'
+            '^\\.ccls-cache$',
+            'Cargo.lock'
         }
     },
     renderer = {
