@@ -24,6 +24,7 @@ require('nightfox').setup({
             ['@keyword.return'] = { fg = '#ff2457' },
             ['@function.builtin'] = { fg = '#76fec5' },
             ['@type.builtin'] = { fg = '#ffcb7f' },
+            ['@attribute.scss'] = { fg = '#ffcb7f' },
             ['@constant.builtin'] = { fg = '#00dc7d' },
             ['@constant'] = { fg = '#f2f4f8' },
             ['@property'] = { fg = '#f2f4f8' },
