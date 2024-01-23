@@ -35,6 +35,7 @@ require('nightfox').setup({
             ['@keyword.operator'] = { fg = '#f375f3' },
             ['@keyword.function'] = { fg = '#f375f3' },
             ['@operator'] = { fg = '#f375f3' },
+            ['@comment.todo'] = { link = '@text.todo' },
 
             NvimTreeRootFolder = { fg = '#999999' },
             NvimTreeFolderName = { fg = '#f2f4f8' },
