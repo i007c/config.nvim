@@ -39,6 +39,7 @@ require('nightfox').setup({
             ['@lsp.type.enumMember'] = { link = '@variable' },
 
             NvimTreeRootFolder = { fg = '#999999' },
+            NvimTreeExecFile = { fg = '#00dc7d' },
             NvimTreeFolderName = { fg = '#f2f4f8' },
             NvimTreeOpenedFolderName = { fg = '#f2f4f8' },
             NvimTreeFolderIcon = { fg = '#ff2970' },
