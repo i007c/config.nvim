@@ -57,3 +57,7 @@ vim.keymap.set('n', '<leader>r', function()
         vim.cmd.echo('"ERROR"')
     end
 end)
+
+vim.cmd([[
+    let g:ftplugin_sql_omni_key = '<C-j>'
+]])

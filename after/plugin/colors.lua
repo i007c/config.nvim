@@ -41,6 +41,7 @@ require('nightfox').setup({
             ['@comment.todo'] = { link = '@text.todo' },
             ['@lsp.type.enumMember'] = { link = '@variable' },
             ['@variable.member'] = { link = '@variable' },
+            ['@lsp.type.string'] = { link = '@string' },
 
             NvimTreeRootFolder = { fg = '#999999' },
             NvimTreeExecFile = { fg = '#00dc7d' },
