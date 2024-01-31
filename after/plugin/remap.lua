@@ -44,6 +44,9 @@ vim.keymap.set('n', '<leader>ic', '<CMD>Octo issue create<CR>')
 vim.keymap.set('n', '<leader>pl', '<CMD>Octo pr list<CR>')
 vim.keymap.set('n', '<leader>pc', '<CMD>Octo pr create<CR>')
 
+-- colors
+vim.keymap.set('n', '<leader>gi', '<CMD>Inspect<CR>')
+
 
 vim.keymap.set({ 'n', 'i' }, '<C-n>', '<CMD>Telescope neoclip<CR>')
 
@@ -61,3 +64,4 @@ end)
 vim.cmd([[
     let g:ftplugin_sql_omni_key = '<C-j>'
 ]])
+

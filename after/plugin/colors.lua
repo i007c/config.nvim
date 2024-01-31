@@ -22,7 +22,7 @@ require('nightfox').setup({
             ['@include'] = { fg = '#ff2457' },
             ['@define'] = { fg = '#ff2457' },
             ['@keyword.return'] = { fg = '#ff2457' },
-            ['@function'] = { fg =  '#699fff'},
+            ['@function'] = { fg = '#699fff' },
             ['@function.builtin'] = { fg = '#76fec5' },
             ['@type'] = { fg = '#ffcb7f' },
             ['@type.builtin'] = { link = '@type' },
@@ -42,6 +42,12 @@ require('nightfox').setup({
             ['@lsp.type.enumMember'] = { link = '@variable' },
             ['@variable.member'] = { link = '@variable' },
             ['@lsp.type.string'] = { link = '@string' },
+
+            ['@tag.scss'] = { fg = '#ffcb7f' },
+            ['@tag.tsx'] = { fg = '#ffcb7f' },
+            ['@tag.builtin.tsx'] = { fg = '#ff2457' },
+            ['@markup.heading'] = { fg = '#dfdfe0' },
+            ['@tag.delimiter'] = { fg = '#e346e3' },
 
             NvimTreeRootFolder = { fg = '#999999' },
             NvimTreeExecFile = { fg = '#00dc7d' },
@@ -69,7 +75,7 @@ require('nightfox').setup({
                 number = '#00dc7d',
                 keyword = '#ff2457',
                 type = '#ffcb7f',
-                builtin1 = '#e346e3', -- builtin type
+                -- builtin1 = '#e346e3', -- builtin type
                 func = '#699fff',
                 preproc = '#ff2457',
                 conditional = '#ff2457',
