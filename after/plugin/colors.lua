@@ -42,6 +42,7 @@ require('nightfox').setup({
             ['@lsp.type.enumMember'] = { link = '@variable' },
             ['@variable.member'] = { link = '@variable' },
             ['@lsp.type.string'] = { link = '@string' },
+            ['@lsp.type.member'] = { link = '@function' },
 
             ['@tag.scss'] = { fg = '#ffcb7f' },
             ['@tag.tsx'] = { fg = '#ffcb7f' },
