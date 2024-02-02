@@ -39,10 +39,11 @@ require('nightfox').setup({
             ['@keyword.function'] = { fg = '#f375f3' },
             ['@operator'] = { fg = '#f375f3' },
             ['@comment.todo'] = { link = '@text.todo' },
-            ['@lsp.type.enumMember'] = { link = '@variable' },
             ['@variable.member'] = { link = '@variable' },
+            ['@lsp.type.enumMember'] = { link = '@variable' },
             ['@lsp.type.string'] = { link = '@string' },
             ['@lsp.type.member'] = { link = '@function' },
+            ['@lsp.type.interface'] = { link = '@type' },
 
             ['@tag.scss'] = { fg = '#ffcb7f' },
             ['@tag.tsx'] = { fg = '#ffcb7f' },
