@@ -53,7 +53,7 @@ require('nightfox').setup({
             ['@tag.scss'] = { fg = '#ffcb7f' },
             ['@tag.tsx'] = { fg = '#ffcb7f' },
             ['@tag.builtin.tsx'] = { fg = '#ff2457' },
-            ['@markup.heading'] = { fg = '#dfdfe0' },
+            ['@markup.heading.html'] = { fg = '#dfdfe0' },
             ['@tag.delimiter'] = { fg = '#e346e3' },
 
             NvimTreeRootFolder = { fg = '#999999' },
