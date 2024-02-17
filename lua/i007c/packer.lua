@@ -100,7 +100,7 @@ return require('packer').startup(function(use)
     -- use 'linrongbin16/lsp-progress.nvim'
     use {
         'j-hui/fidget.nvim',
-        tag = 'v1.1.0'
+        tag = 'v1.4.0'
     }
 
     -- search
