@@ -1,4 +1,3 @@
-
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 local luasnip = require('luasnip')
@@ -38,8 +37,12 @@ cmp.setup({
         end,
     },
     mapping = {
-        ['<C-p>'] = cmp.mapping.select_prev_item({behavior = cmp.SelectBehavior.Select}),
-        ['<C-n>'] = cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Select}),
+        ['<C-p>'] = cmp.mapping.select_prev_item({
+            behavior = cmp.SelectBehavior.Insert
+        }),
+        ['<C-n>'] = cmp.mapping.select_next_item({
+            behavior = cmp.SelectBehavior.Insert
+        }),
         ['<C-y>'] = cmp.mapping.confirm({ select = true }),
         ['<C-e>'] = cmp.mapping.abort(),
         ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i' }),
@@ -101,8 +104,7 @@ cmp.setup.cmdline({ '/', '?' }, {
 cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
-        { name = 'path', max_item_count = 10 },
+        { name = 'path',    max_item_count = 10 },
         { name = 'cmdline', max_item_count = 10 }
     }
 })
-
