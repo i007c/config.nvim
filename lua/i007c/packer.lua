@@ -66,7 +66,7 @@ return require('packer').startup(function(use)
     -- discord presence
     -- use 'andweeb/presence.nvim'
     -- use 'IogaMaster/neocord'
-    use '~/tmp/neocord'
+    -- use '~/tmp/neocord'
 
     -- formatters ??
     use 'lukas-reineke/lsp-format.nvim'

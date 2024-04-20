@@ -20,6 +20,7 @@
 --    line_number_text    = 'Line %s:%s',               -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
 --})
 
+--[[
 require("neocord").setup({
     -- General options
     logo                = "auto",                -- "auto" or url
@@ -44,3 +45,4 @@ require("neocord").setup({
     line_number_text    = "Line %s out of %s",  -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
     terminal_text       = "Using Terminal",     -- Format string rendered when in terminal mode.
 })
+]]
