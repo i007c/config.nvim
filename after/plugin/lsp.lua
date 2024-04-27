@@ -122,7 +122,13 @@ mlspc.setup_handlers({
 
 mlspc.setup()
 mason.setup({
-    PATH = 'prepend'
+    PATH = 'prepend',
+    pip = {
+        install_args = {
+            "--timeout", "2",
+            "--retries", "20"
+        },
+    }
 })
 
 
