@@ -49,6 +49,7 @@ require('nightfox').setup({
             ['@lsp.type.deriveHelper'] = { link = '@lsp.type.decorator' },
             ['@lsp.type.tomlTableKey.toml'] = { link = '@property.toml' },
             ['@lsp.type.tomlArrayKey.toml'] = { link = '@property.toml' },
+            ['@lsp.type.decorator.rust'] = { link = '@function' },
 
             ['@tag.scss'] = { fg = '#ffcb7f' },
             ['@tag.tsx'] = { fg = '#ffcb7f' },
