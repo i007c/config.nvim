@@ -50,6 +50,7 @@ require('nightfox').setup({
             ['@lsp.type.tomlTableKey.toml'] = { link = '@property.toml' },
             ['@lsp.type.tomlArrayKey.toml'] = { link = '@property.toml' },
             ['@lsp.type.decorator.rust'] = { link = '@function' },
+            ['@lsp.type.deriveHelper.rust'] = { link = '@function' },
 
             ['@tag.scss'] = { fg = '#ffcb7f' },
             ['@tag.tsx'] = { fg = '#ffcb7f' },
