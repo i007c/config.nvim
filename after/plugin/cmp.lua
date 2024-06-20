@@ -1,6 +1,6 @@
 local cmp = require('cmp')
 local lspkind = require('lspkind')
-local luasnip = require('luasnip')
+-- local luasnip = require('luasnip')
 
 -- luasnip.config.set_config({
 --     region_check_events = 'InsertEnter',
@@ -33,7 +33,7 @@ cmp.setup({
     snippet = {
         expand = function(args)
             vim.fn['vsnip#anonymous'](args.body)
-            luasnip.lsp_expand(args.body)
+            -- luasnip.lsp_expand(args.body)
         end,
     },
     mapping = {

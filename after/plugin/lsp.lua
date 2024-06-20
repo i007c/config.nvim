@@ -6,7 +6,7 @@ local mlspc = require('mason-lspconfig')
 
 lsp.preset({
     name = 'recommended',
-    manage_nvim_cmp = false,
+    manage_nvim_cmp = true,
     configure_diagnostics = true,
     set_lsp_keymaps = true,
 })
