@@ -1,0 +1,11 @@
+{
+  "store": {
+    "prefix": ["store"],
+    "body": [
+      "type State = {",
+      "}",
+      "const [state, setState] = createStore<State>({})"
+    ],
+    "description": "solidjs store"
+  }
+}
