@@ -8,6 +8,10 @@ local neoclip = require('neoclip')
 neoclip.setup()
 
 telescope.setup({
+    defaults = {
+        file_ignore_patterns = { "rapidoc.js" },
+    },
+
     extensions = {
         project = {
             base_dirs = {
