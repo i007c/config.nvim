@@ -90,6 +90,13 @@ lspconfig.jsonls.setup({
     capabilities = capabilities
 })
 
+-- lspconfig.rust_analyzer.setup({
+--     -- on_attach = lsp_attach,
+--     -- capabilities = capabilities,
+--     settings = {
+--         ['rust-analyzer'] = {}
+--     }
+-- })
 
 mlspc.setup_handlers({
     function(server_name)
@@ -144,5 +151,3 @@ sign({ name = 'DiagnosticSignError', text = '✘' })
 sign({ name = 'DiagnosticSignWarn', text = '▲' })
 sign({ name = 'DiagnosticSignHint', text = '⚑' })
 sign({ name = 'DiagnosticSignInfo', text = '' })
-
-
