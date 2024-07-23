@@ -16,7 +16,6 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim',
         tag = '0.1.4',
     }
-    use 'nvim-telescope/telescope-project.nvim'
     use 'AckslD/nvim-neoclip.lua'
 
     use 'nvim-tree/nvim-tree.lua'
