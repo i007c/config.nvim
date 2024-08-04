@@ -94,7 +94,7 @@ require('octo').setup({
             reload = { lhs = '<C-r>', desc = 'reload PR' },
             open_in_browser = { lhs = '<C-b>', desc = 'open PR in browser' },
             copy_url = { lhs = '<C-y>', desc = 'copy url to system clipboard' },
-            goto_file = { lhs = 'gf', desc = 'go to file' },
+            -- goto_file = { lhs = 'gf', desc = 'go to file' },
             add_assignee = { lhs = '<leader>aa', desc = 'add assignee' },
             remove_assignee = { lhs = '<leader>ad', desc = 'remove assignee' },
             create_label = { lhs = '<leader>lc', desc = 'create label' },

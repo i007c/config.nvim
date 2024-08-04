@@ -16,11 +16,11 @@ vim.keymap.set('n', 'M', '<CMD>NvimTreeFocus<CR>')
 
 vim.keymap.set({ 'n', 'i' }, '<C-S>', vim.cmd.w)
 
-local trouble = require("trouble")
-vim.keymap.set('n', '<S-B>', (function()
-    trouble.open('diagnostics')
-    trouble.next({ skip_groups = true, jump = true });
-end))
+-- local trouble = require("trouble")
+-- vim.keymap.set('n', '<S-B>', (function()
+--     trouble.open('diagnostics')
+--     trouble.next({ skip_groups = true, jump = true });
+-- end))
 
 
 vim.keymap.set({ 'n', 'i' }, '<up>', '<nop>')

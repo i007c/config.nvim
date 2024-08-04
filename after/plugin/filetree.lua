@@ -40,8 +40,8 @@ local function on_attach(bufnr)
     vim.keymap.set('n', 'gy',    api.fs.copy.absolute_path,             opts('Copy Absolute Path'))
     vim.keymap.set('n', 'H',     api.tree.toggle_hidden_filter,         opts('Toggle Dotfiles'))
     vim.keymap.set('n', 'I',     api.tree.toggle_gitignore_filter,      opts('Toggle Git Ignore'))
-    vim.keymap.set('n', 'J',     api.node.navigate.sibling.last,        opts('Last Sibling'))
-    vim.keymap.set('n', 'K',     api.node.navigate.sibling.first,       opts('First Sibling'))
+    vim.keymap.set('n', 'J',     api.node.navigate.sibling.next,        opts('Next Sibling'))
+    vim.keymap.set('n', 'K',     api.node.navigate.sibling.prev,        opts('Prev Sibling'))
     vim.keymap.set('n', 'o',     api.node.open.edit,                    opts('Open'))
     vim.keymap.set('n', 'O',     api.node.open.no_window_picker,        opts('Open: No Window Picker'))
     vim.keymap.set('n', 'p',     api.fs.paste,                          opts('Paste'))
@@ -81,7 +81,9 @@ require("nvim-tree").setup({
             '^\\.git$',
             'package-lock.json',
             '^\\.ccls-cache$',
-            'Cargo.lock'
+            'Cargo.lock',
+            'target',
+            'build'
         }
     },
     renderer = {

@@ -34,9 +34,9 @@ local function lsp_keymaps(bufnr)
     map('x', '<F3>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
 
     -- Diagnostics
-    map('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
-    map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
-    map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+    map('n', 'gf', '<cmd>lua vim.diagnostic.open_float()<cr>')
+    -- map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
+    map('n', 'B', '<cmd>lua vim.diagnostic.goto_next()<cr>')
 end
 
 local function lsp_attach(client, bufnr)
@@ -94,7 +94,14 @@ lspconfig.jsonls.setup({
 --     -- on_attach = lsp_attach,
 --     -- capabilities = capabilities,
 --     settings = {
---         ['rust-analyzer'] = {}
+--         ['rust-analyzer'] = {
+--             cargo = {
+--                 extraArgs = {'--offline'}
+--             },
+--             check = {
+--                 extraArgs = {'--offline'}
+--             }
+--         }
 --     }
 -- })
 

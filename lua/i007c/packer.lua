@@ -79,7 +79,7 @@ return require('packer').startup(function(use)
     use 'onsails/lspkind.nvim'
 
     -- show error messages
-    use 'folke/trouble.nvim'
+    -- use 'folke/trouble.nvim'
 
     -- view hex files
     use 'RaafatTurki/hex.nvim'
