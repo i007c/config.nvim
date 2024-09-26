@@ -59,26 +59,6 @@ lspconfig.ccls.setup({
     capabilities = capabilities
 })
 
-lspconfig.pylsp.setup({
-    on_attach = lsp_attach,
-    capabilities = capabilities,
-    settings = {
-        pylsp = {
-            plugins = {
-                flake8 = {
-                    enabled = true
-                },
-                ruff = {
-                    enabled = true
-                },
-                pylsp_mypy = {
-                    enabled = false
-                }
-            }
-        }
-    }
-})
-
 lspconfig.jsonls.setup({
     on_attach = lsp_attach,
     settings = {
@@ -128,6 +108,30 @@ mlspc.setup_handlers({
                     telemetry = {
                         enable = false,
                     },
+                }
+            }
+        })
+    end,
+    pylsp = function()
+        lspconfig.pylsp.setup({
+            on_attach = lsp_attach,
+            capabilities = capabilities,
+            settings = {
+                pylsp = {
+                    plugins = {
+                        flake8 = {
+                            enabled = false
+                        },
+                        ruff = {
+                            enabled = true
+                        },
+                        pylsp_mypy = {
+                            enabled = false
+                        },
+                        -- jedi = {
+                        --     environment = "~/.pyenv/versions/3.12.1/bin/python"
+                        -- },
+                    }
                 }
             }
         })
