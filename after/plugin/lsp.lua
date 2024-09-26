@@ -139,8 +139,9 @@ mason.setup({
     PATH = 'prepend',
     pip = {
         install_args = {
-            "--timeout", "2",
-            "--retries", "20"
+            "--proxy", "socks5h://127.0.0.1:9898",
+            "--timeout", "5",
+            "--retries", "5"
         },
     }
 })
