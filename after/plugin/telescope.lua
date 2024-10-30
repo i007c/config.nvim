@@ -22,6 +22,9 @@ vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<leader>ps', function()
     builtin.grep_string({ search = vim.fn.input('Grep > ') })
 end)
+vim.keymap.set('n', '<leader>pl', function()
+    builtin.live_grep({ cwd = vim.fn.input('Live Grep CWD > ') })
+end)
 
 vim.keymap.set('n', '<leader>pr', function()
     builtin.grep_string({
