@@ -84,6 +84,9 @@ require("nvim-tree").setup({
             'Cargo.lock',
             'target',
             'build'
+        },
+        exclude = {
+            'build.gradle',
         }
     },
     renderer = {
