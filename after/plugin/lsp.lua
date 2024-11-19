@@ -70,19 +70,15 @@ lspconfig.jsonls.setup({
     capabilities = capabilities
 })
 
+-- local rust_config = {}
+-- if vim.fn.getcwd() == "/home/i007c/tmp/acp" then
+--     rust_config["cargo"] = { target = "aarch64-linux-android", target_os = "android" }
+-- end
+--
 -- lspconfig.rust_analyzer.setup({
---     -- on_attach = lsp_attach,
---     -- capabilities = capabilities,
---     settings = {
---         ['rust-analyzer'] = {
---             cargo = {
---                 extraArgs = {'--offline'}
---             },
---             check = {
---                 extraArgs = {'--offline'}
---             }
---         }
---     }
+--     on_attach = lsp_attach,
+--     capabilities = capabilities,
+--     settings = { ['rust-analyzer'] = rust_config }
 -- })
 
 mlspc.setup_handlers({
