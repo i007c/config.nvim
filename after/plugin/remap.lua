@@ -65,4 +65,3 @@ vim.cmd([[
     let g:ftplugin_sql_omni_key = '<C-j>'
     let g:vsnip_snippet_dir = '~/.config/nvim/vsnip/'
 ]])
-

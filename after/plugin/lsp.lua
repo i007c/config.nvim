@@ -40,6 +40,14 @@ local function lsp_keymaps(bufnr)
 end
 
 local function lsp_attach(client, bufnr)
+    local max_filesize = 50 * 1024 -- 50 KB
+    local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(bufnr))
+    if ok and stats and stats.size > max_filesize then
+        print("ignore")
+        return
+    end
+
+
     local buf_command = vim.api.nvim_buf_create_user_command
 
     lsp_keymaps(bufnr)
