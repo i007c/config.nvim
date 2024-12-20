@@ -10,10 +10,5 @@
       "})"
     ],
     "description": "solidjs store"
-  },
-  "log": {
-    "prefix": ["log"],
-    "body": ["console.log($0)"],
-    "description": "console.log()"
   }
 }
