@@ -58,60 +58,72 @@ local function on_attach(bufnr)
     vim.keymap.set('n', '<2-RightMouse>', api.tree.change_root_to_node, opts('CD'))
 end
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+return {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+        "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+        vim.g.loaded_netrw = 1
+        vim.g.loaded_netrwPlugin = 1
 
-require("nvim-tree").setup({
-    on_attach = on_attach,
-    view = {
-        width = 25,
-    },
-    update_focused_file = {
-        enable = true,
-    },
-    filters = {
-        custom = {
-            'node_modules',
-            '__pycache__',
-            '.pytest_cache',
-            -- '^\\.env$',
-            '^\\.git$',
-            'package-lock.json',
-            '^\\.ccls-cache$',
-            'Cargo.lock',
-            'target',
-            'build'
-        },
-        exclude = {
-            'build.gradle',
-        }
-    },
-    renderer = {
-        highlight_git = "icon",
-        icons = {
-            git_placement = "signcolumn",
-            -- git_placement = "right_align",
-            show = {
-                git = true,
+
+        local function open_nvim_tree()
+            require("nvim-tree.api").tree.open()
+        end
+
+        vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
+
+        require("nvim-tree").setup({
+            on_attach = on_attach,
+            view = {
+                width = 25,
             },
-            glyphs = {
-                git = {
-                    unstaged = '',
-                    staged = '',
-                    untracked = '',
-                    deleted = '',
-                    ignored = ' ',
+            update_focused_file = {
+                enable = true,
+            },
+            filters = {
+                custom = {
+                    'node_modules',
+                    '__pycache__',
+                    '.pytest_cache',
+                    -- '^\\.env$',
+                    '^\\.git$',
+                    'package-lock.json',
+                    '^\\.ccls-cache$',
+                    'Cargo.lock',
+                    'target',
+                    'build'
                 },
+                exclude = {
+                    'build.gradle',
+                }
+            },
+            renderer = {
+                highlight_git = "icon",
+                icons = {
+                    git_placement = "signcolumn",
+                    -- git_placement = "right_align",
+                    show = {
+                        git = true,
+                    },
+                    glyphs = {
+                        git = {
+                            unstaged = '',
+                            staged = '',
+                            untracked = '',
+                            deleted = '',
+                            ignored = ' ',
+                        },
+                    }
+                }
+            },
+            git = {
+                ignore = false
             }
-        }
-    },
-    git = {
-        ignore = false
-    }
-})
-
-local function open_nvim_tree()
-    require("nvim-tree.api").tree.open()
-end
-
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+        })
+    end,
+}
