@@ -3,5 +3,17 @@
     "prefix": ["log"],
     "body": ["console.log($0)"],
     "description": "console.log()"
+  },
+  "store": {
+    "prefix": ["store"],
+    "body": [
+      "type State = {",
+      "$0",
+      "}",
+      "const [state, setState] = createStore<State>({",
+      "$0",
+      "})"
+    ],
+    "description": "solidjs store"
   }
 }

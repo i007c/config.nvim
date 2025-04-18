@@ -86,8 +86,8 @@ return {
             },
             sources = {
                 -- { name = 'luasnip' },
-                { name = 'nvim_lsp' },
                 { name = 'vsnip' },
+                { name = 'nvim_lsp' },
                 buffer
             },
             formatting = {
