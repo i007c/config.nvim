@@ -100,6 +100,7 @@ return {
                 },
                 exclude = {
                     'build.gradle',
+                    'build.sh',
                 }
             },
             renderer = {
