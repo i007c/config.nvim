@@ -40,6 +40,7 @@ local group = {
     ['@constant'] = { fg = '#f2f4f8' },
     ['@lsp.type.const.rust'] = { link = '@constant' },
     ['@lsp.type.procMacro.rust'] = { link = 'PreProc' },
+    ['@function.macro'] = { link = 'PreProc' },
 
     ['@tag.scss'] = { fg = '#ffcb7f' },
     ['@tag.tsx'] = { fg = '#ffcb7f' },
