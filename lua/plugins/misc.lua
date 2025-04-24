@@ -3,8 +3,20 @@ return {
     {
         "iamcco/markdown-preview.nvim",
         -- lazy = true,
-        -- ft = {"markdown"},
-        -- build = function() vim.fn["mkdp#util#install"]() end
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
+        config = function()
+            vim.cmd([[
+                let g:mkdp_auto_start = 0
+                let g:mkdp_auto_close = 0
+                let g:mkdp_combine_preview = 0
+                let g:mkdp_echo_preview_url = 1
+                let g:mkdp_page_title = 'mkdp: ${name}'
+                let g:mkdp_theme = 'dark'
+            ]])
+        end
+
     },
 
     {
@@ -65,19 +77,17 @@ return {
         dependencies = {},
         config = function()
             require('nvim-surround').setup()
+        end,
+    },
 
+    {
+        "mbbill/undotree",
+        config = function()
             vim.cmd([[
                 let g:undotree_SplitWidth=27
                 let g:undotree_WindowLayout=3
                 let g:undotree_DiffAutoOpen=0
             ]])
-
-            vim.cmd([[
-                let g:mkdp_auto_start = 1
-                let g:mkdp_echo_preview_url = 1
-            ]])
-        end,
-    },
-
-    "mbbill/undotree",
+        end
+    }
 }
