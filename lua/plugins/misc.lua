@@ -10,7 +10,7 @@ return {
             vim.cmd([[
                 let g:mkdp_auto_start = 0
                 let g:mkdp_port = '8421'
-                let g:mkdp_auto_close = 0
+                let g:mkdp_auto_close = 1
                 let g:mkdp_combine_preview = 0
                 let g:mkdp_echo_preview_url = 1
                 let g:mkdp_page_title = 'mkdp: ${name}'
