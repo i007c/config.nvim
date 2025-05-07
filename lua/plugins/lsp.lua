@@ -54,35 +54,28 @@ return {
         local mlspc = require('mason-lspconfig')
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-        mlspc.setup_handlers({
-            function(server_name)
-                lspconfig[server_name].setup({
-                    on_attach = lsp_attach,
-                    capabilities = capabilities
-                })
-            end,
-            lua_ls = function()
-                lspconfig.lua_ls.setup({
-                    capabilities = capabilities,
-                    on_attach = lsp_attach,
-                    settings = {
-                        Lua = {
-                            diagnostics = {
-                                globals = { 'vim' }
-                            },
-                            workspace = {
-                                library = vim.api.nvim_get_runtime_file('', true),
-                                checkThirdParty = false
-                            },
-                            telemetry = {
-                                enable = false,
-                            },
-                        }
-                    }
-                })
-            end,
+        mlspc.setup({ automatic_enable = { exclude = { "lua_ls" } } })
+        vim.lsp.config('*', {
+            on_attach = lsp_attach,
+            capabilities = capabilities
         })
-
-        mlspc.setup()
+        vim.lsp.config('lua_ls', {
+            capabilities = capabilities,
+            on_attach = lsp_attach,
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = { 'vim' }
+                    },
+                    workspace = {
+                        library = vim.api.nvim_get_runtime_file('', true),
+                        checkThirdParty = false
+                    },
+                    telemetry = {
+                        enable = false,
+                    },
+                }
+            }
+        })
     end,
 }
