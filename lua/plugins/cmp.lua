@@ -16,6 +16,10 @@ return {
     config = function()
         local cmp = require('cmp')
         local lspkind = require('lspkind')
+
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
+        vim.lsp.config('*', { capabilities = capabilities })
+
         -- local luasnip = require('luasnip')
 
         -- luasnip.config.set_config({

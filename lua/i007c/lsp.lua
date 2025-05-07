@@ -42,40 +42,31 @@ local function lsp_attach(_, bufnr)
     end, { desc = 'Format buffer with language server' })
 end
 
-return {
-    "neovim/nvim-lspconfig",
-    version = "*",
-    lazy = false,
-    dependencies = {
-        "williamboman/mason-lspconfig.nvim",
-    },
-    config = function()
-        local lspconfig = require('lspconfig')
-        local mlspc = require('mason-lspconfig')
-        local capabilities = require('cmp_nvim_lsp').default_capabilities()
+vim.lsp.config('*', { on_attach = lsp_attach })
 
-        mlspc.setup({ automatic_enable = { exclude = { "lua_ls" } } })
-        vim.lsp.config('*', {
-            on_attach = lsp_attach,
-            capabilities = capabilities
-        })
-        vim.lsp.config('lua_ls', {
-            capabilities = capabilities,
-            on_attach = lsp_attach,
-            settings = {
-                Lua = {
-                    diagnostics = {
-                        globals = { 'vim' }
-                    },
-                    workspace = {
-                        library = vim.api.nvim_get_runtime_file('', true),
-                        checkThirdParty = false
-                    },
-                    telemetry = {
-                        enable = false,
-                    },
-                }
-            }
-        })
-    end,
-}
+
+vim.lsp.config('lua_ls', {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            },
+            workspace = {
+                library = vim.api.nvim_get_runtime_file('', true),
+                checkThirdParty = false
+            },
+            telemetry = {
+                enable = false,
+            },
+        }
+    }
+})
+
+vim.lsp.enable('ts_ls')
+vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('lemminx')
+vim.lsp.enable('jsonls')
+vim.lsp.enable('pylsp')
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('taplo')
+vim.lsp.enable('cssls')

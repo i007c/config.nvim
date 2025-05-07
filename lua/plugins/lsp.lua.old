@@ -1,0 +1,24 @@
+
+return {
+    "neovim/nvim-lspconfig",
+    version = "*",
+    lazy = false,
+    dependencies = {
+        "williamboman/mason-lspconfig.nvim",
+    },
+    config = function()
+        local lspconfig = require('lspconfig')
+        local mlspc = require('mason-lspconfig')
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+        mlspc.setup({ automatic_enable = { exclude = { "rust_analyzer" } } })
+
+        vim.lsp.config('*', {
+            on_attach = lsp_attach,
+            capabilities = capabilities
+        })
+
+        vim.lsp.enable('rust_analyzer')
+
+    end,
+}
