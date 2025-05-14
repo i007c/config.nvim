@@ -22,3 +22,9 @@ vim.opt.termbidi = true
 vim.opt.colorcolumn = '80'
 
 vim.g.mapleader = ' '
+
+vim.filetype.add({
+    extension = {
+        h = "c",
+    },
+})
