@@ -63,6 +63,7 @@ vim.lsp.config('lua_ls', {
 })
 
 vim.lsp.enable('ts_ls')
+vim.lsp.enable('dartls')
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('lemminx')
 vim.lsp.enable('jsonls')
