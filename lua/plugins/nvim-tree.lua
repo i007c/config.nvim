@@ -87,6 +87,8 @@ return {
             },
             filters = {
                 custom = {
+                    'record',
+                    '\\.tgz$',
                     'node_modules',
                     '__pycache__',
                     '.pytest_cache',
