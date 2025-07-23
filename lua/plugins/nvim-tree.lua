@@ -99,11 +99,12 @@ return {
                     'Cargo.lock',
                     'target',
                     'build',
-                    '^\\.ig'
+                    '^\\.igx\\.'
                 },
                 exclude = {
                     'build.gradle',
                     'build.sh',
+                    '^\\.ig\\.',
                 }
             },
             renderer = {
