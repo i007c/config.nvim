@@ -87,7 +87,7 @@ return {
             },
             filters = {
                 custom = {
-                    'record',
+                    '^record$',
                     '\\.tgz$',
                     'node_modules',
                     '__pycache__',
