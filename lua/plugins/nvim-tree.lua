@@ -98,12 +98,12 @@ return {
                     '^\\.ccls-cache$',
                     'Cargo.lock',
                     'target',
-                    'build',
+                    -- 'build',
                     '^\\.igx\\.'
                 },
                 exclude = {
-                    'build.gradle',
-                    'build.sh',
+                    -- 'build.gradle',
+                    -- 'build.sh',
                     '^\\.ig\\.',
                 }
             },
