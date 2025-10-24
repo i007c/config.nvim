@@ -23,10 +23,10 @@ vim.keymap.set({ 'n', 'i' }, '<C-S>', vim.cmd.w)
 -- end))
 
 
-vim.keymap.set({ 'n', 'i' }, '<up>', '<nop>')
-vim.keymap.set({ 'n', 'i' }, '<down>', '<nop>')
-vim.keymap.set({ 'n', 'i' }, '<left>', '<nop>')
-vim.keymap.set({ 'n', 'i' }, '<right>', '<nop>')
+-- vim.keymap.set({ 'n', 'i' }, '<up>', '<nop>')
+-- vim.keymap.set({ 'n', 'i' }, '<down>', '<nop>')
+-- vim.keymap.set({ 'n', 'i' }, '<left>', '<nop>')
+-- vim.keymap.set({ 'n', 'i' }, '<right>', '<nop>')
 
 
 -- now this is epic - ThePrimeagen
