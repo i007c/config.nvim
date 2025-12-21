@@ -90,6 +90,7 @@ return {
                     '^record$',
                     '\\.tgz$',
                     'node_modules',
+                    'bun.lock',
                     '__pycache__',
                     '.pytest_cache',
                     -- '^\\.env$',
