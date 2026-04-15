@@ -109,6 +109,8 @@ return {
                 }
             },
             renderer = {
+                group_empty = true,
+                root_folder_label = false,
                 highlight_git = "icon",
                 icons = {
                     git_placement = "signcolumn",
